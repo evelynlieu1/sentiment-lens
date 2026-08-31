@@ -134,7 +134,7 @@ function loadEmotion(): Promise<Classifier> {
 }
 
 /**
- * Loads both models. First call downloads ~245MB of quantized weights; every
+ * Loads both models. First call downloads ~255MB of quantized weights; every
  * later call reuses the in-process singletons.
  */
 export async function warmModels(

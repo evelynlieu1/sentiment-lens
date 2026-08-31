@@ -17,7 +17,7 @@ cp .env.example .env.local     # then add your Reddit credentials — see below
 npm run dev                    # http://localhost:3000
 ```
 
-The **first** thread you analyse downloads ~245MB of model weights into `.models/`. That
+The **first** thread you analyse downloads ~255MB of model weights into `.models/`. That
 happens once; every run after it is instant. Nothing else is downloaded at runtime.
 
 ---
@@ -105,7 +105,7 @@ some deep chains, the shortfall is reported in the UI rather than silently hidde
 | Sentiment | [`Xenova/twitter-roberta-base-sentiment-latest`](https://huggingface.co/Xenova/twitter-roberta-base-sentiment-latest) | ONNX port of CardiffNLP's TweetEval model — RoBERTa pretrained on ~124M tweets, finetuned for 3-class sentiment. The standard open-weights choice for short, informal text. |
 | Emotion | [`SamLowe/roberta-base-go_emotions-onnx`](https://huggingface.co/SamLowe/roberta-base-go_emotions-onnx) | RoBERTa finetuned on Google's GoEmotions — 58k human-annotated **Reddit** comments across 28 emotions. Trained on exactly this domain, and multi-label, so a comment can be both `annoyance` and `disapproval`. |
 
-Both are loaded as `q8`-quantized ONNX (~245MB total, downloaded once on first analysis and
+Both are loaded as `q8`-quantized ONNX (~255MB total, downloaded once on first analysis and
 cached in `.models/`). They are process-wide singletons, so only the first run pays the
 ~20s load cost.
 

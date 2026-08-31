@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
         send({
           type: "status",
           stage: "model",
-          message: "Loading models (first run downloads ~245MB)",
+          message: "Loading models (first run downloads ~255MB)",
         });
         await warmModels((progress) =>
           send({ type: "status", stage: progress.stage, message: progress.message }),

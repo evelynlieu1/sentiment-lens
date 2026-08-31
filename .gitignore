@@ -47,5 +47,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# model weights (~245MB, re-downloaded on demand)
+# model weights (~255MB, re-downloaded on demand)
 .models/
