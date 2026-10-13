@@ -17,13 +17,14 @@ ONNX: no inference API, no model API key, and no comment text ever leaves your m
 ```bash
 git clone https://github.com/evelynlieu1/sentiment-lens.git
 cd sentiment-lens
-npm install                    # ~360 packages, includes the ONNX runtime
+npm install                    # includes the ONNX runtime
 cp .env.example .env.local     # then add your Reddit credentials (see below)
 npm run dev                    # http://localhost:3000
 ```
 
 The **first** thread you analyse downloads ~255MB of model weights into `.models/`. That
-happens once; every run after it is instant. Nothing else is downloaded at runtime.
+happens once, and later runs reuse the cached model weights. Nothing else is downloaded at
+runtime.
 
 ---
 
@@ -176,15 +177,18 @@ components/
   ui/                         shadcn primitives (generated, edit with care)
 ```
 
-## Contributing
+## Development checks
 
 ```bash
-npm run lint       # eslint
-npx tsc --noEmit   # typecheck
-npm run build      # production build; run this before opening a PR
+npm run lint        # eslint
+npm run typecheck   # next typegen, then tsc --noEmit
+npm run build       # production build
 ```
 
-Both lint and typecheck are clean on `main`; please keep them that way.
+`npm run typecheck` runs `next typegen` before `tsc --noEmit`. The app uses route types that
+Next.js generates (for example `LayoutProps` in `app/layout.tsx`), and these generated files
+are gitignored. This means running `npx tsc --noEmit` on its own fails on a fresh clone.
+Therefore, use the npm script.
 
 Where to start if you want to extend it:
 
