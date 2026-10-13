@@ -16,7 +16,7 @@ export default function Home() {
         <p className="text-muted-foreground mt-2 max-w-2xl text-sm leading-relaxed">
           Paste a Reddit thread and read the room. Every comment is scored for sentiment
           by CardiffNLP&apos;s TweetEval RoBERTa and for emotion by a RoBERTa trained on
-          Google&apos;s GoEmotions corpus — both open-weights, both running locally on
+          Google&apos;s GoEmotions corpus, both open-weights, both running locally on
           your machine.
         </p>
       </header>
@@ -29,7 +29,7 @@ export default function Home() {
             The app will try Reddit&apos;s public JSON endpoint, but Reddit now blocks
             most anonymous reads, so expect HTTP 403. For reliable access, add <code className="font-mono">REDDIT_CLIENT_ID</code> and{" "}
             <code className="font-mono">REDDIT_CLIENT_SECRET</code> to{" "}
-            <code className="font-mono">.env.local</code> — see the README for the
+            <code className="font-mono">.env.local</code>; see the README for the
             two-minute setup.
           </AlertDescription>
         </Alert>

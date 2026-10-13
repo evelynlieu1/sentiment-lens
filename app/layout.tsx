@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sentiment Lens — Reddit thread emotion analysis",
+  title: "Sentiment Lens: Reddit thread emotion analysis",
   description:
     "Paste a Reddit thread URL and read the room: per-comment sentiment and emotion scored locally by open-weights RoBERTa models.",
 };

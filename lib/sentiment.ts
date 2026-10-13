@@ -9,12 +9,12 @@ import type { EmotionScore, SentimentLabel } from "./types";
 /**
  * Models
  * ------
- * Sentiment: CardiffNLP's twitter-roberta-base-sentiment-latest — a RoBERTa
+ * Sentiment: CardiffNLP's twitter-roberta-base-sentiment-latest, a RoBERTa
  * trained on ~124M tweets and finetuned on the TweetEval sentiment benchmark.
  * It is the standard open-weights choice for short, informal, social text,
  * which is exactly what Reddit comments are. Served here as the ONNX port.
  *
- * Emotion: SamLowe/roberta-base-go_emotions — RoBERTa finetuned on Google's
+ * Emotion: SamLowe/roberta-base-go_emotions, RoBERTa finetuned on Google's
  * GoEmotions corpus (58k human-annotated Reddit comments, 28 labels). It is
  * multi-label, so a comment can be both "annoyance" and "disapproval".
  */
@@ -39,7 +39,7 @@ const MAX_TOKENS = 512;
  * because sequences are padded to the widest in their batch. Measured against
  * unpadded ground truth over 111 comments this costs ~0.015 mean absolute
  * polarity error with zero sentiment-label flips, and the error does not shrink
- * with narrower batches — so the widest, fastest setting is also the most
+ * with narrower batches, so the widest, fastest setting is also the most
  * accurate one available.
  */
 const TOKEN_BUDGET = 8192;

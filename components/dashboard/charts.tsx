@@ -143,7 +143,7 @@ export function EmotionChart({ analytics }: { analytics: Analytics }) {
       <CardHeader>
         <CardTitle className="text-base">Emotional profile</CardTitle>
         <CardDescription>
-          Comments per emotion from GoEmotions (28 labels, multi-label — one comment can
+          Comments per emotion from GoEmotions (28 labels, multi-label: one comment can
           register several). Green is positive-valence, red negative, grey ambiguous.
         </CardDescription>
       </CardHeader>

@@ -1,7 +1,7 @@
 # Normalize line endings so Windows/macOS/Linux collaborators don't churn diffs.
 * text=auto eol=lf
 
-# Binary assets — never touch these.
+# Binary assets: never touch these.
 *.ico binary
 *.png binary
 *.jpg binary

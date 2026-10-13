@@ -97,7 +97,7 @@ export interface Analytics {
   meanPolarity: number;
   medianPolarity: number;
   polarityStdDev: number;
-  /** 0..1 — how evenly split the thread is between positive and negative */
+  /** 0..1, how evenly split the thread is between positive and negative */
   polarization: number;
   meanConfidence: number;
   emotions: EmotionAggregate[];

@@ -263,7 +263,7 @@ export function CommentTable({ comments }: { comments: AnalyzedComment[] }) {
                           </Badge>
                         ))}
                         {comment.emotions.length === 0 ? (
-                          <span className="text-muted-foreground text-xs">—</span>
+                          <span className="text-muted-foreground text-xs">-</span>
                         ) : null}
                       </div>
                     </TableCell>

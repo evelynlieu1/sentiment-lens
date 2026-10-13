@@ -66,7 +66,7 @@ export async function parseThreadUrl(input: string): Promise<ParsedThread> {
 
   const segments = url.pathname.split("/").filter(Boolean);
 
-  // Share link: /r/<sub>/s/<code> — only resolvable by following the redirect
+  // Share link: /r/<sub>/s/<code>, only resolvable by following the redirect
   const shareIdx = segments.indexOf("s");
   if (shareIdx !== -1 && segments[shareIdx - 2] === "r") {
     return parseThreadUrl(await resolveShareLink(url.toString()));

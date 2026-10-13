@@ -103,7 +103,7 @@ export function Overview({ result }: { result: AnalysisResult }) {
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         <Metric
           label="Dominant emotion"
-          value={topEmotion ? titleCase(topEmotion.label) : "—"}
+          value={topEmotion ? titleCase(topEmotion.label) : "-"}
           hint="Emotion with the highest total confidence across all comments, from the 28-label GoEmotions taxonomy."
           sub={
             topEmotion
@@ -121,7 +121,7 @@ export function Overview({ result }: { result: AnalysisResult }) {
           label="Model confidence"
           value={formatPercent(analytics.meanConfidence * 100)}
           hint="Average confidence in the winning sentiment label. Below ~60% means the thread is full of ambiguous or sarcastic text the model finds hard to call."
-          sub={analytics.meanConfidence < 0.6 ? "Low — read results loosely" : "Healthy"}
+          sub={analytics.meanConfidence < 0.6 ? "Low: read results loosely" : "Healthy"}
         />
         <Metric
           label="Upvotes vs mood"
